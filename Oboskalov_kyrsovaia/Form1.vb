@@ -13,6 +13,7 @@
         Me.MEDICAL_CARDTableAdapter.Fill(Me.BaseDataSet.MEDICAL_CARD)
         Me.STUDENTTableAdapter.Fill(Me.BaseDataSet.STUDENT)
 
+
         'фильтр группа
         ComboBoxGroup.Items.Clear()
         For Each RowCB As DataRow In
