@@ -167,7 +167,7 @@ Partial Class Form11
         'ListView1
         '
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(309, 32)
+        Me.ListView1.Location = New System.Drawing.Point(15, 214)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(292, 183)
         Me.ListView1.TabIndex = 61
@@ -177,7 +177,7 @@ Partial Class Form11
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(617, 236)
+        Me.ClientSize = New System.Drawing.Size(726, 443)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.ComboBoxHostel)
         Me.Controls.Add(Me.ComboBoxGroup)

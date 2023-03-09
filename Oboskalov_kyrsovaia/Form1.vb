@@ -24,7 +24,7 @@
         'фильтр общежитие
         ComboBoxHostel.Items.Clear()
         ComboBoxHostel.Items.Add("Нет")
-        ComboBoxHostel.Items.Add("Да")
+        ComboBoxHostel.Items.Add("ДаДа")
 
         ListViewStudent.Items.Clear()
         Dim items(7) As String
