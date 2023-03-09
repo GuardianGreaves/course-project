@@ -278,55 +278,55 @@
 
 
     Public Sub Button2_Click(sender As Object, e As EventArgs) Handles ButtonStudentData.Click
-        'a = ListView1.FocusedItem.Text
-        'With Dialog3
-        '    'ListView1.Items.Clear()
-        '    'Dim items(2) As String
-        '    'Dim TempRow As DataRow
-        '    'For Each Row As DataRow In
-        '    'Me.KporiginalDataSet.STUDENT.Rows
-        '    'items(1) = Row(1)
-        '    'TempRow = Row.GetParentRow("GRUPPASTUDENT")
-        '    'items(2) = TempRow(3)
-        '    'items(3) = Row(3)
-        '    'items(4) = Row(4)
-        '    'items(5) = Row(5)
-        '    'items(6) = Row(6)
-        '    'Dim it As New ListViewItem()
-        '    'it.Text = Row(0)
-        '    'it.SubItems.AddRange(items)
-        '    'ListView1.Items.Add(it)
-        '    'Next Row
+        a = ListViewStudent.FocusedItem.Text
+        With Form11
+            'ListView1.Items.Clear()
+            'Dim items(2) As String
+            'Dim TempRow As DataRow
+            'For Each Row As DataRow In
+            'Me.KporiginalDataSet.STUDENT.Rows
+            'items(1) = Row(1)
+            'TempRow = Row.GetParentRow("GRUPPASTUDENT")
+            'items(2) = TempRow(3)
+            'items(3) = Row(3)
+            'items(4) = Row(4)
+            'items(5) = Row(5)
+            'items(6) = Row(6)
+            'Dim it As New ListViewItem()
+            'it.Text = Row(0)
+            'it.SubItems.AddRange(items)
+            'ListView1.Items.Add(it)
+            'Next Row
 
-        '    .Text = "Медицинская карточка студента"
-        '    Dim CurrentWorkerRow As DataRow = BaseDataSet.STUDENT.Select("ID_student ='" & a & "'")(0)
-        '    .OldRowID = CurrentWorkerRow("ID_student")
-        '    .AddOrChange = True
-        '    .TextBox1.Text = CurrentWorkerRow("FIO_student")
-        '    .TextBox1.ReadOnly = True
-        '    .DateTimePicker1.Value = CurrentWorkerRow("date_of_application")
-        '    '.DateTimePicker1.
-        '    .ComboBox1.Text = CurrentWorkerRow.GetParentRow("GRUPPASTUDENT")("name_group")
-        '    .ComboBox1.Enabled = False
-        '    .DateTimePicker2.Value = CurrentWorkerRow("birthday")
-        '    .DateTimePicker2.ShowUpDown = False
-        '    .DateTimePicker2.ShowCheckBox = False
-        '    .TextBox3.Text = CurrentWorkerRow("address_students")
-        '    .TextBox3.ReadOnly = True
-        '    .ComboBox2.Text = CurrentWorkerRow("hostel")
-        '    .ComboBox2.Enabled = False
-        '    .ComboBox1.Items.Clear()
-        '    For Each Row As DataRow In
-        '            Me.BaseDataSet.GRUPPA.Rows
-        '        .ComboBox1.Items.Add(Row(3))
-        '    Next Row
-        '    Dim CurrentWorkerRow2 As DataRow = BaseDataSet.MEDICAL_CARD.Select("ID_student ='" & a & "'")(0)
-        '    .Label8.Text = CurrentWorkerRow2("ID_card")
-        '    .ShowDialog()
-        '    If DialogResult = DialogResult.OK Then
-        '        medcard()
-        '    End If
-        'End With
+            .Text = "Редактирование студента"
+            Dim CurrentWorkerRow As DataRow = BaseDataSet.STUDENT.Select("ID_student ='" & LastSelectedItem.Text & "'")(0)
+            '.OldRowIdForm11 = CurrentWorkerRow("ID_student")
+            '.AddOrChangeForm11 = True
+            .TextBoxFIO.Text = CurrentWorkerRow("FIO_student")
+            '.TextBox1.ReadOnly = True
+            .DateTimePickerZachisleniye.Value = CurrentWorkerRow("date_of_application")
+            '.DateTimePicker1.
+            .ComboBoxGroup.Text = CurrentWorkerRow.GetParentRow("GRUPPASTUDENT")("name_group")
+            '.ComboBox1.Enabled = False
+            .DateTimePickerBirthday.Value = CurrentWorkerRow("birthday")
+            '.DateTimePicker2.ShowUpDown = False
+            '.DateTimePicker2.ShowCheckBox = False
+            .TextBoxAddressStudent.Text = CurrentWorkerRow("address_students")
+            '.TextBox3.ReadOnly = True
+            .ComboBoxHostel.Text = CurrentWorkerRow("hostel")
+            '.ComboBox2.Enabled = False
+            .ComboBoxGroup.Items.Clear()
+            For Each Row As DataRow In
+                    Me.BaseDataSet.GRUPPA.Rows
+                .ComboBoxGroup.Items.Add(Row(3))
+            Next Row
+            Dim CurrentWorkerRow2 As DataRow = BaseDataSet.MEDICAL_CARD.Select("ID_student ='" & LastSelectedItem.Text & "'")(0)
+            .Label8.Text = CurrentWorkerRow2("ID_card")
+            .ShowDialog()
+            If DialogResult = DialogResult.OK Then
+                student()
+            End If
+        End With
     End Sub
 
     Private Sub ОсмотрыПередПрививкамиИПослеПрививокToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ОсмотрыПередПрививкамиИПослеПрививокToolStripMenuItem.Click
