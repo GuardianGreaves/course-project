@@ -2,7 +2,6 @@
     Dim LastSelectedItem As ListViewItem
     Dim LastSelectedItem2 As ListViewItem
     Dim strFIO As String
-    Public a
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PictureBox1.Image = Image.FromFile(IO.Directory.GetCurrentDirectory & "\Picture\KPK_gerb.jpg")
@@ -23,8 +22,8 @@
 
         'фильтр общежитие
         ComboBoxHostel.Items.Clear()
+        ComboBoxHostel.Items.Add("Да")
         ComboBoxHostel.Items.Add("Нет")
-        ComboBoxHostel.Items.Add("ДаДа")
 
         ListViewStudent.Items.Clear()
         Dim items(7) As String
