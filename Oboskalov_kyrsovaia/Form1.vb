@@ -1,7 +1,8 @@
 ﻿Public Class Form1
-    Dim LastSelectedItem As ListViewItem
+    Public LastSelectedItem As ListViewItem
     Dim LastSelectedItem2 As ListViewItem
     Dim strFIO As String
+    Public a
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PictureBox1.Image = Image.FromFile(IO.Directory.GetCurrentDirectory & "\Picture\KPK_gerb.jpg")
@@ -279,25 +280,9 @@
 
     Public Sub Button2_Click(sender As Object, e As EventArgs) Handles ButtonStudentData.Click
         a = ListViewStudent.FocusedItem.Text
-        With Form11
-            'ListView1.Items.Clear()
-            'Dim items(2) As String
-            'Dim TempRow As DataRow
-            'For Each Row As DataRow In
-            'Me.KporiginalDataSet.STUDENT.Rows
-            'items(1) = Row(1)
-            'TempRow = Row.GetParentRow("GRUPPASTUDENT")
-            'items(2) = TempRow(3)
-            'items(3) = Row(3)
-            'items(4) = Row(4)
-            'items(5) = Row(5)
-            'items(6) = Row(6)
-            'Dim it As New ListViewItem()
-            'it.Text = Row(0)
-            'it.SubItems.AddRange(items)
-            'ListView1.Items.Add(it)
-            'Next Row
+        Form11.Show()
 
+        With Form11
             .Text = "Редактирование студента"
             Dim CurrentWorkerRow As DataRow = BaseDataSet.STUDENT.Select("ID_student ='" & LastSelectedItem.Text & "'")(0)
             '.OldRowIdForm11 = CurrentWorkerRow("ID_student")
@@ -322,10 +307,22 @@
             Next Row
             Dim CurrentWorkerRow2 As DataRow = BaseDataSet.MEDICAL_CARD.Select("ID_student ='" & LastSelectedItem.Text & "'")(0)
             .Label8.Text = CurrentWorkerRow2("ID_card")
-            .ShowDialog()
-            If DialogResult = DialogResult.OK Then
-                student()
-            End If
+
+            '.ListViewDocs.Items.Clear()
+            'Dim items2(2) As String
+            'Dim TempRow2 As DataRow
+            'For Each Row2 As DataRow In Me.BaseDataSet.ABSENTEEISM_DUE_TO_ILLNESS.Select("ID_student ='" & LastSelectedItem.Text & "*'")
+            '    MsgBox("d")
+            '    TempRow2 = Row2.GetParentRow("MEDICAL_ORGANIZATIONABSENTEEISM_DUE_TO_ILLNESS")
+            '    items2(1) = TempRow2(0)
+            '    Dim it2 As New ListViewItem()
+            '    it2.Text = Row2(0)
+            '    it2.SubItems.AddRange(items2)
+            '    .ListViewDocs.Items.Add(it2)
+            'Next Row2
+
+
+
         End With
     End Sub
 

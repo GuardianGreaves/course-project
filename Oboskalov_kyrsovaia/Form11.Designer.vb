@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form11
     Inherits System.Windows.Forms.Form
 
     'Форма переопределяет dispose для очистки списка компонентов.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,8 @@ Partial Class Form11
     'Примечание: следующая процедура является обязательной для конструктора форм Windows Forms
     'Для ее изменения используйте конструктор форм Windows Form.  
     'Не изменяйте ее в редакторе исходного кода.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.ComboBoxHostel = New System.Windows.Forms.ComboBox()
         Me.ComboBoxGroup = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -36,17 +35,25 @@ Partial Class Form11
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBoxFIO = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ComboBoxHostel = New System.Windows.Forms.ComboBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.BaseDataSet = New Oboskalov_kyrsovaia.baseDataSet()
+        Me.STUDENTTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.STUDENTTableAdapter()
+        Me.TableAdapterManager = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.TableAdapterManager()
+        Me.ABSENTEEISM_DUE_TO_ILLNESSTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.ABSENTEEISM_DUE_TO_ILLNESSTableAdapter()
+        Me.GRUPPATableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.GRUPPATableAdapter()
+        Me.MEDICAL_CARDTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.MEDICAL_CARDTableAdapter()
+        Me.MEDICAL_ORGANIZATIONTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.MEDICAL_ORGANIZATIONTableAdapter()
+        Me.DATE_OF_MEDICAL_EXAMINATIONSTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.DATE_OF_MEDICAL_EXAMINATIONSTableAdapter()
+        Me.EXAMINATION_BEFORE_AFTER_VACCINATIONTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.EXAMINATION_BEFORE_AFTER_VACCINATIONTableAdapter()
+        Me.PREVENTIVE_VACCINATIONSTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.PREVENTIVE_VACCINATIONSTableAdapter()
+        Me.RESPONIBLE_FOR_PASSESTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.RESPONIBLE_FOR_PASSESTableAdapter()
+        Me.SURVEYSTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.SURVEYSTableAdapter()
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        CType(Me.BaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ComboBoxHostel
-        '
-        Me.ComboBoxHostel.FormattingEnabled = True
-        Me.ComboBoxHostel.Items.AddRange(New Object() {"Да", "Нет"})
-        Me.ComboBoxHostel.Location = New System.Drawing.Point(15, 187)
-        Me.ComboBoxHostel.Name = "ComboBoxHostel"
-        Me.ComboBoxHostel.Size = New System.Drawing.Size(120, 21)
-        Me.ComboBoxHostel.TabIndex = 60
         '
         'ComboBoxGroup
         '
@@ -164,20 +171,111 @@ Partial Class Form11
         Me.Label1.TabIndex = 47
         Me.Label1.Text = "Фамилия, имя, отчество"
         '
+        'ComboBoxHostel
+        '
+        Me.ComboBoxHostel.FormattingEnabled = True
+        Me.ComboBoxHostel.Items.AddRange(New Object() {"Да", "Нет"})
+        Me.ComboBoxHostel.Location = New System.Drawing.Point(15, 187)
+        Me.ComboBoxHostel.Name = "ComboBoxHostel"
+        Me.ComboBoxHostel.Size = New System.Drawing.Size(120, 21)
+        Me.ComboBoxHostel.TabIndex = 63
+        '
         'ListView1
         '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
+        Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(15, 214)
+        Me.ListView1.Location = New System.Drawing.Point(295, 48)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(292, 183)
-        Me.ListView1.TabIndex = 61
+        Me.ListView1.Size = New System.Drawing.Size(377, 160)
+        Me.ListView1.TabIndex = 64
         Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "Название документа"
+        Me.ColumnHeader1.Width = 187
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Организация"
+        Me.ColumnHeader2.Width = 110
+        '
+        'BaseDataSet
+        '
+        Me.BaseDataSet.CaseSensitive = True
+        Me.BaseDataSet.DataSetName = "baseDataSet"
+        Me.BaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'STUDENTTableAdapter
+        '
+        Me.STUDENTTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.ABSENTEEISM_DUE_TO_ILLNESSTableAdapter = Me.ABSENTEEISM_DUE_TO_ILLNESSTableAdapter
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.DATE_OF_MEDICAL_EXAMINATIONSTableAdapter = Nothing
+        Me.TableAdapterManager.EXAMINATION_BEFORE_AFTER_VACCINATIONTableAdapter = Nothing
+        Me.TableAdapterManager.GRUPPATableAdapter = Me.GRUPPATableAdapter
+        Me.TableAdapterManager.MedCardTableAdapter = Nothing
+        Me.TableAdapterManager.MEDICAL_CARDTableAdapter = Me.MEDICAL_CARDTableAdapter
+        Me.TableAdapterManager.MEDICAL_DOCUMENTTableAdapter = Nothing
+        Me.TableAdapterManager.MEDICAL_ORGANIZATIONTableAdapter = Me.MEDICAL_ORGANIZATIONTableAdapter
+        Me.TableAdapterManager.MEDICAL_WORKERTableAdapter = Nothing
+        Me.TableAdapterManager.PREVENTIVE_VACCINATIONSTableAdapter = Nothing
+        Me.TableAdapterManager.RESPONIBLE_FOR_PASSESTableAdapter = Nothing
+        Me.TableAdapterManager.STUDENTTableAdapter = Me.STUDENTTableAdapter
+        Me.TableAdapterManager.SURVEYSTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Oboskalov_kyrsovaia.baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'ABSENTEEISM_DUE_TO_ILLNESSTableAdapter
+        '
+        Me.ABSENTEEISM_DUE_TO_ILLNESSTableAdapter.ClearBeforeFill = True
+        '
+        'GRUPPATableAdapter
+        '
+        Me.GRUPPATableAdapter.ClearBeforeFill = True
+        '
+        'MEDICAL_CARDTableAdapter
+        '
+        Me.MEDICAL_CARDTableAdapter.ClearBeforeFill = True
+        '
+        'MEDICAL_ORGANIZATIONTableAdapter
+        '
+        Me.MEDICAL_ORGANIZATIONTableAdapter.ClearBeforeFill = True
+        '
+        'DATE_OF_MEDICAL_EXAMINATIONSTableAdapter
+        '
+        Me.DATE_OF_MEDICAL_EXAMINATIONSTableAdapter.ClearBeforeFill = True
+        '
+        'EXAMINATION_BEFORE_AFTER_VACCINATIONTableAdapter
+        '
+        Me.EXAMINATION_BEFORE_AFTER_VACCINATIONTableAdapter.ClearBeforeFill = True
+        '
+        'PREVENTIVE_VACCINATIONSTableAdapter
+        '
+        Me.PREVENTIVE_VACCINATIONSTableAdapter.ClearBeforeFill = True
+        '
+        'RESPONIBLE_FOR_PASSESTableAdapter
+        '
+        Me.RESPONIBLE_FOR_PASSESTableAdapter.ClearBeforeFill = True
+        '
+        'SURVEYSTableAdapter
+        '
+        Me.SURVEYSTableAdapter.ClearBeforeFill = True
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Дата"
+        Me.ColumnHeader3.Width = 76
         '
         'Form11
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(726, 443)
+        Me.ClientSize = New System.Drawing.Size(742, 536)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.ComboBoxHostel)
         Me.Controls.Add(Me.ComboBoxGroup)
@@ -195,12 +293,11 @@ Partial Class Form11
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form11"
         Me.Text = "Form11"
+        CType(Me.BaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents ComboBoxHostel As ComboBox
     Friend WithEvents ComboBoxGroup As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
@@ -214,5 +311,21 @@ Partial Class Form11
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBoxFIO As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents BaseDataSet As baseDataSet
+    Friend WithEvents STUDENTTableAdapter As baseDataSetTableAdapters.STUDENTTableAdapter
+    Friend WithEvents TableAdapterManager As baseDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents ABSENTEEISM_DUE_TO_ILLNESSTableAdapter As baseDataSetTableAdapters.ABSENTEEISM_DUE_TO_ILLNESSTableAdapter
+    Friend WithEvents ComboBoxHostel As ComboBox
+    Friend WithEvents MEDICAL_CARDTableAdapter As baseDataSetTableAdapters.MEDICAL_CARDTableAdapter
+    Friend WithEvents MEDICAL_ORGANIZATIONTableAdapter As baseDataSetTableAdapters.MEDICAL_ORGANIZATIONTableAdapter
+    Friend WithEvents GRUPPATableAdapter As baseDataSetTableAdapters.GRUPPATableAdapter
     Friend WithEvents ListView1 As ListView
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents DATE_OF_MEDICAL_EXAMINATIONSTableAdapter As baseDataSetTableAdapters.DATE_OF_MEDICAL_EXAMINATIONSTableAdapter
+    Friend WithEvents EXAMINATION_BEFORE_AFTER_VACCINATIONTableAdapter As baseDataSetTableAdapters.EXAMINATION_BEFORE_AFTER_VACCINATIONTableAdapter
+    Friend WithEvents PREVENTIVE_VACCINATIONSTableAdapter As baseDataSetTableAdapters.PREVENTIVE_VACCINATIONSTableAdapter
+    Friend WithEvents RESPONIBLE_FOR_PASSESTableAdapter As baseDataSetTableAdapters.RESPONIBLE_FOR_PASSESTableAdapter
+    Friend WithEvents SURVEYSTableAdapter As baseDataSetTableAdapters.SURVEYSTableAdapter
+    Friend WithEvents ColumnHeader3 As ColumnHeader
 End Class
