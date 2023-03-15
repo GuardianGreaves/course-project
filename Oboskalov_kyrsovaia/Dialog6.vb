@@ -31,11 +31,11 @@ Public Class Dialog6
 
 
 		If AddOrChangeDialog6 = False Then
-			Form6.ABSENTEEISM_DUE_TO_ILLNESSTableAdapter.Insert("Пропуск занятий по болезни", StudentId, OrganizationId, ComboBoxMedCards.Text, DateTimePicker1.Value, TextBoxDiagnoz.Text)
+			Form6.ABSENTEEISM_DUE_TO_ILLNESSTableAdapter.Insert("Пропуск занятий по болезни", StudentId, OrganizationId, ComboBoxMedCards.Text, DateTimePicker1.Value.Date, TextBoxDiagnoz.Text)
 		End If
 		If AddOrChangeDialog6 = True Then
 			Dim OldWorkerRow As DataRow = Form1.BaseDataSet.STUDENT.Select("ID_student='" & OldRowIdDialog6.ToString & "'")(0)
-			Form6.ABSENTEEISM_DUE_TO_ILLNESSTableAdapter.Update("Пропуск занятий по болезни", StudentId, OrganizationId, ComboBoxMedCards.Text, DateTimePicker1.Value, TextBoxDiagnoz.Text, OldWorkerRow(0), OldWorkerRow(1), OldWorkerRow(2), OldWorkerRow(3), OldWorkerRow(4), OldWorkerRow(5))
+			Form6.ABSENTEEISM_DUE_TO_ILLNESSTableAdapter.Update("Пропуск занятий по болезни", StudentId, OrganizationId, ComboBoxMedCards.Text, DateTimePicker1.Value.Date, TextBoxDiagnoz.Text, OldWorkerRow(0), OldWorkerRow(1), OldWorkerRow(2), OldWorkerRow(3), OldWorkerRow(4), OldWorkerRow(5))
 			Form6.propyskpobolezni()
 		End If
 

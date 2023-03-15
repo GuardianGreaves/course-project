@@ -46,7 +46,7 @@ Partial Class Dialog6
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(70, 240)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(195, 96)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -75,7 +75,7 @@ Partial Class Dialog6
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Location = New System.Drawing.Point(6, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(82, 13)
         Me.Label1.TabIndex = 1
@@ -84,7 +84,7 @@ Partial Class Dialog6
         'ComboBoxStudentFIO
         '
         Me.ComboBoxStudentFIO.FormattingEnabled = True
-        Me.ComboBoxStudentFIO.Location = New System.Drawing.Point(15, 25)
+        Me.ComboBoxStudentFIO.Location = New System.Drawing.Point(9, 25)
         Me.ComboBoxStudentFIO.Name = "ComboBoxStudentFIO"
         Me.ComboBoxStudentFIO.Size = New System.Drawing.Size(156, 21)
         Me.ComboBoxStudentFIO.TabIndex = 3
@@ -92,7 +92,7 @@ Partial Class Dialog6
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 49)
+        Me.Label2.Location = New System.Drawing.Point(6, 49)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(108, 13)
         Me.Label2.TabIndex = 4
@@ -101,7 +101,7 @@ Partial Class Dialog6
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 140)
+        Me.Label3.Location = New System.Drawing.Point(182, 10)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(33, 13)
         Me.Label3.TabIndex = 5
@@ -110,7 +110,7 @@ Partial Class Dialog6
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 179)
+        Me.Label4.Location = New System.Drawing.Point(182, 49)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(51, 13)
         Me.Label4.TabIndex = 7
@@ -118,14 +118,14 @@ Partial Class Dialog6
         '
         'TextBoxDiagnoz
         '
-        Me.TextBoxDiagnoz.Location = New System.Drawing.Point(15, 195)
+        Me.TextBoxDiagnoz.Location = New System.Drawing.Point(185, 65)
         Me.TextBoxDiagnoz.Name = "TextBoxDiagnoz"
         Me.TextBoxDiagnoz.Size = New System.Drawing.Size(156, 20)
         Me.TextBoxDiagnoz.TabIndex = 8
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(15, 156)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(185, 26)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(156, 20)
         Me.DateTimePicker1.TabIndex = 9
@@ -133,7 +133,7 @@ Partial Class Dialog6
         'ComboBoxMedCards
         '
         Me.ComboBoxMedCards.FormattingEnabled = True
-        Me.ComboBoxMedCards.Location = New System.Drawing.Point(12, 65)
+        Me.ComboBoxMedCards.Location = New System.Drawing.Point(9, 65)
         Me.ComboBoxMedCards.Name = "ComboBoxMedCards"
         Me.ComboBoxMedCards.Size = New System.Drawing.Size(156, 21)
         Me.ComboBoxMedCards.TabIndex = 10
@@ -149,7 +149,7 @@ Partial Class Dialog6
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(9, 89)
+        Me.Label5.Location = New System.Drawing.Point(6, 89)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(144, 13)
         Me.Label5.TabIndex = 11
@@ -161,7 +161,7 @@ Partial Class Dialog6
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(228, 281)
+        Me.ClientSize = New System.Drawing.Size(353, 137)
         Me.Controls.Add(Me.ComboBoxOrganization)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.ComboBoxMedCards)

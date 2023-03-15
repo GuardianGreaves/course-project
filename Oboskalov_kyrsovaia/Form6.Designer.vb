@@ -22,6 +22,7 @@ Partial Class Form6
     'Не изменяйте ее в редакторе исходного кода.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.ListViewPropuskiPoBolezni = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -47,9 +48,12 @@ Partial Class Form6
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ИзменитьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.BaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ListViewPropuskiPoBolezni
@@ -256,6 +260,18 @@ Partial Class Form6
         Me.ComboBox2.Size = New System.Drawing.Size(125, 21)
         Me.ComboBox2.TabIndex = 22
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ИзменитьToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 48)
+        '
+        'ИзменитьToolStripMenuItem
+        '
+        Me.ИзменитьToolStripMenuItem.Name = "ИзменитьToolStripMenuItem"
+        Me.ИзменитьToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ИзменитьToolStripMenuItem.Text = "Изменить"
+        '
         'Form6
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -269,6 +285,7 @@ Partial Class Form6
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -298,4 +315,6 @@ Partial Class Form6
     Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents ИзменитьToolStripMenuItem As ToolStripMenuItem
 End Class

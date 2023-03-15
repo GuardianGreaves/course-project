@@ -159,4 +159,49 @@
             End If
         Next Row
     End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+        ListViewPropuskiPoBolezni.Items.Clear()
+        Dim items(4) As String
+        Dim TempRow As DataRow
+        If TextBox1.Text = vbNullChar Then
+            TextBox1.Text = ""
+        End If
+        strFIOForm6 = TextBox1.Text
+
+
+        For Each Row As DataRow In Me.BaseDataSet.ABSENTEEISM_DUE_TO_ILLNESS.Select("Diagnosis Like'%" & TextBox2.Text & "*'")
+            TempRow = Row.GetParentRow("STUDENTABSENTEEISM_DUE_TO_ILLNESS")
+            items(1) = TempRow(1)
+            items(2) = Row(4)
+            items(3) = Row(5)
+            items(4) = Row(6)
+            Dim it As New ListViewItem()
+            it.Text = Row(1)
+            it.SubItems.AddRange(items)
+            ListViewPropuskiPoBolezni.Items.Add(it)
+        Next Row
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ComboBox1.Items.Clear()
+        ComboBox2.Items.Clear()
+        TextBox1.Clear()
+        TextBox2.Clear()
+    End Sub
+
+    Private Sub ListViewPropuskiPoBolezni_ItemSelectionChanged(sender As Object, e As ListViewItemSelectionChangedEventArgs) Handles ListViewPropuskiPoBolezni.ItemSelectionChanged
+        LastSelectedItemForm6 = e.Item
+        LastSelectedItem2Form6 = e.Item
+    End Sub
+
+    Private Sub ListViewPropuskiPoBolezni_MouseClick(sender As Object, e As MouseEventArgs) Handles ListViewPropuskiPoBolezni.MouseClick
+        If e.Button = Windows.Forms.MouseButtons.Right Then
+            ContextMenuStrip1.Show(sender, e.X, e.Y)
+        End If
+    End Sub
+
+    Private Sub ИзменитьToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ИзменитьToolStripMenuItem.Click
+
+    End Sub
 End Class
