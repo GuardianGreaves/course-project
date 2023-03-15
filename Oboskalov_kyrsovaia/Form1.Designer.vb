@@ -27,6 +27,8 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ФайлToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.БазаДанныхToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.СохранитьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ВыходToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.СправочникиToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.СтудентыToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ГруппыToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -45,6 +47,8 @@ Partial Class Form1
         Me.ПрофилактическиеПрививкиToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ОбследованияToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.СправкаToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ПросмотрСправкиToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ОПрограммеToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBoxAddressStudent = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -74,10 +78,6 @@ Partial Class Form1
         Me.MEDICAL_CARDTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.MEDICAL_CARDTableAdapter()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ИзменитьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ОПрограммеToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ПросмотрСправкиToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.СохранитьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ВыходToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -101,7 +101,7 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ФайлToolStripMenuItem, Me.СправочникиToolStripMenuItem, Me.ОтчетыToolStripMenuItem, Me.ВсеДокументыToolStripMenuItem, Me.СправкаToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(735, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(743, 24)
         Me.MenuStrip1.TabIndex = 20
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -115,8 +115,20 @@ Partial Class Form1
         'БазаДанныхToolStripMenuItem
         '
         Me.БазаДанныхToolStripMenuItem.Name = "БазаДанныхToolStripMenuItem"
-        Me.БазаДанныхToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.БазаДанныхToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.БазаДанныхToolStripMenuItem.Text = "База данных"
+        '
+        'СохранитьToolStripMenuItem
+        '
+        Me.СохранитьToolStripMenuItem.Name = "СохранитьToolStripMenuItem"
+        Me.СохранитьToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+        Me.СохранитьToolStripMenuItem.Text = "Сохранить все"
+        '
+        'ВыходToolStripMenuItem
+        '
+        Me.ВыходToolStripMenuItem.Name = "ВыходToolStripMenuItem"
+        Me.ВыходToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+        Me.ВыходToolStripMenuItem.Text = "Выход"
         '
         'СправочникиToolStripMenuItem
         '
@@ -230,6 +242,18 @@ Partial Class Form1
         Me.СправкаToolStripMenuItem.Name = "СправкаToolStripMenuItem"
         Me.СправкаToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.СправкаToolStripMenuItem.Text = "Справка"
+        '
+        'ПросмотрСправкиToolStripMenuItem
+        '
+        Me.ПросмотрСправкиToolStripMenuItem.Name = "ПросмотрСправкиToolStripMenuItem"
+        Me.ПросмотрСправкиToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.ПросмотрСправкиToolStripMenuItem.Text = "Просмотр справки"
+        '
+        'ОПрограммеToolStripMenuItem
+        '
+        Me.ОПрограммеToolStripMenuItem.Name = "ОПрограммеToolStripMenuItem"
+        Me.ОПрограммеToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.ОПрограммеToolStripMenuItem.Text = "О программе"
         '
         'GroupBox1
         '
@@ -462,35 +486,11 @@ Partial Class Form1
         Me.ИзменитьToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.ИзменитьToolStripMenuItem.Text = "Изменить"
         '
-        'ОПрограммеToolStripMenuItem
-        '
-        Me.ОПрограммеToolStripMenuItem.Name = "ОПрограммеToolStripMenuItem"
-        Me.ОПрограммеToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ОПрограммеToolStripMenuItem.Text = "О программе"
-        '
-        'ПросмотрСправкиToolStripMenuItem
-        '
-        Me.ПросмотрСправкиToolStripMenuItem.Name = "ПросмотрСправкиToolStripMenuItem"
-        Me.ПросмотрСправкиToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ПросмотрСправкиToolStripMenuItem.Text = "Просмотр справки"
-        '
-        'СохранитьToolStripMenuItem
-        '
-        Me.СохранитьToolStripMenuItem.Name = "СохранитьToolStripMenuItem"
-        Me.СохранитьToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.СохранитьToolStripMenuItem.Text = "Сохранить все"
-        '
-        'ВыходToolStripMenuItem
-        '
-        Me.ВыходToolStripMenuItem.Name = "ВыходToolStripMenuItem"
-        Me.ВыходToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ВыходToolStripMenuItem.Text = "Выход"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(735, 329)
+        Me.ClientSize = New System.Drawing.Size(743, 329)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)

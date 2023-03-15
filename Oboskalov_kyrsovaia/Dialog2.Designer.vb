@@ -77,10 +77,12 @@ Partial Class Dialog2
         '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker1.Location = New System.Drawing.Point(15, 64)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(171, 20)
         Me.DateTimePicker1.TabIndex = 2
+        Me.DateTimePicker1.Value = New Date(2023, 4, 6, 0, 0, 0, 0)
         '
         'TextBox2
         '

@@ -9570,7 +9570,8 @@ Namespace baseDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID_group, date_of_receipt, number_of_persons, name_group FROM GRUPPA"
+            Me._commandCollection(0).CommandText = "SELECT        ID_group, date_of_receipt, number_of_persons, name_group"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     "& _ 
+                "       GRUPPA"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

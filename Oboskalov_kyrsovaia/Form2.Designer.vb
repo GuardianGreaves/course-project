@@ -40,14 +40,23 @@ Partial Class Form2
         Me.GRUPPABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GRUPPATableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.GRUPPATableAdapter()
         Me.TableAdapterManager = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.TableAdapterManager()
+        Me.ComboBoxGruppa = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxNumbStud = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxDate = New System.Windows.Forms.ComboBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ИзменитьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.BaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GRUPPABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.ComboBoxDate)
+        Me.GroupBox2.Controls.Add(Me.ComboBoxNumbStud)
+        Me.GroupBox2.Controls.Add(Me.ComboBoxGruppa)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label1)
@@ -162,6 +171,7 @@ Partial Class Form2
         '
         'BaseDataSet
         '
+        Me.BaseDataSet.CaseSensitive = True
         Me.BaseDataSet.DataSetName = "baseDataSet"
         Me.BaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
@@ -192,6 +202,42 @@ Partial Class Form2
         Me.TableAdapterManager.SURVEYSTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Oboskalov_kyrsovaia.baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'ComboBoxGruppa
+        '
+        Me.ComboBoxGruppa.FormattingEnabled = True
+        Me.ComboBoxGruppa.Location = New System.Drawing.Point(9, 31)
+        Me.ComboBoxGruppa.Name = "ComboBoxGruppa"
+        Me.ComboBoxGruppa.Size = New System.Drawing.Size(79, 21)
+        Me.ComboBoxGruppa.TabIndex = 4
+        '
+        'ComboBoxNumbStud
+        '
+        Me.ComboBoxNumbStud.FormattingEnabled = True
+        Me.ComboBoxNumbStud.Location = New System.Drawing.Point(106, 32)
+        Me.ComboBoxNumbStud.Name = "ComboBoxNumbStud"
+        Me.ComboBoxNumbStud.Size = New System.Drawing.Size(116, 21)
+        Me.ComboBoxNumbStud.TabIndex = 5
+        '
+        'ComboBoxDate
+        '
+        Me.ComboBoxDate.FormattingEnabled = True
+        Me.ComboBoxDate.Location = New System.Drawing.Point(237, 31)
+        Me.ComboBoxDate.Name = "ComboBoxDate"
+        Me.ComboBoxDate.Size = New System.Drawing.Size(116, 21)
+        Me.ComboBoxDate.TabIndex = 6
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ИзменитьToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 48)
+        '
+        'ИзменитьToolStripMenuItem
+        '
+        Me.ИзменитьToolStripMenuItem.Name = "ИзменитьToolStripMenuItem"
+        Me.ИзменитьToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ИзменитьToolStripMenuItem.Text = "Изменить"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -206,6 +252,7 @@ Partial Class Form2
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.BaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GRUPPABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -227,4 +274,9 @@ Partial Class Form2
     Friend WithEvents GRUPPABindingSource As BindingSource
     Friend WithEvents GRUPPATableAdapter As baseDataSetTableAdapters.GRUPPATableAdapter
     Friend WithEvents TableAdapterManager As baseDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents ComboBoxGruppa As ComboBox
+    Friend WithEvents ComboBoxNumbStud As ComboBox
+    Friend WithEvents ComboBoxDate As ComboBox
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents ИзменитьToolStripMenuItem As ToolStripMenuItem
 End Class

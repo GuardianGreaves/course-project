@@ -27,6 +27,8 @@ Partial Class Dialog3
         Me.Cancel_Button = New System.Windows.Forms.Button()
         Me.TextBoxNameOrganization = New System.Windows.Forms.TextBox()
         Me.TextBoxAdresOrganization = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -38,7 +40,7 @@ Partial Class Dialog3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(153, 266)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(15, 101)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -66,17 +68,35 @@ Partial Class Dialog3
         '
         'TextBoxNameOrganization
         '
-        Me.TextBoxNameOrganization.Location = New System.Drawing.Point(62, 98)
+        Me.TextBoxNameOrganization.Location = New System.Drawing.Point(15, 25)
         Me.TextBoxNameOrganization.Name = "TextBoxNameOrganization"
-        Me.TextBoxNameOrganization.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxNameOrganization.Size = New System.Drawing.Size(147, 20)
         Me.TextBoxNameOrganization.TabIndex = 1
         '
         'TextBoxAdresOrganization
         '
-        Me.TextBoxAdresOrganization.Location = New System.Drawing.Point(62, 141)
+        Me.TextBoxAdresOrganization.Location = New System.Drawing.Point(15, 64)
         Me.TextBoxAdresOrganization.Name = "TextBoxAdresOrganization"
-        Me.TextBoxAdresOrganization.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxAdresOrganization.Size = New System.Drawing.Size(147, 20)
         Me.TextBoxAdresOrganization.TabIndex = 2
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(125, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Название организации"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(12, 48)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(38, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Адрес"
         '
         'Dialog3
         '
@@ -84,7 +104,9 @@ Partial Class Dialog3
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(311, 307)
+        Me.ClientSize = New System.Drawing.Size(173, 142)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBoxAdresOrganization)
         Me.Controls.Add(Me.TextBoxNameOrganization)
         Me.Controls.Add(Me.TableLayoutPanel1)
@@ -105,4 +127,6 @@ Partial Class Dialog3
     Friend WithEvents Cancel_Button As System.Windows.Forms.Button
     Friend WithEvents TextBoxNameOrganization As TextBox
     Friend WithEvents TextBoxAdresOrganization As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class

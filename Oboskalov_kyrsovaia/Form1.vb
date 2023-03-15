@@ -5,7 +5,7 @@
     Public a
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        PictureBox1.Image = Image.FromFile(IO.Directory.GetCurrentDirectory & "\Picture\KPK_gerb.jpg")
+        'PictureBox1.Image = Image.FromFile(IO.Directory.GetCurrentDirectory & "\Picture\KPK_gerb.jpg")
         student()
     End Sub
 
@@ -366,11 +366,5 @@
         Form8.Show()
     End Sub
 
-    Private Sub СохранитьToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles СохранитьToolStripMenuItem.Click
 
-    End Sub
-
-    Private Sub ВсеДокументыToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ВсеДокументыToolStripMenuItem.Click
-
-    End Sub
 End Class

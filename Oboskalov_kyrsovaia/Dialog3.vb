@@ -10,7 +10,7 @@ Public Class Dialog3
 		End If
 		If AddOrChangeDialog3 = True Then
 			Dim OldWorkerRow2 As DataRow = Form1.BaseDataSet.MEDICAL_ORGANIZATION.Select("ID_organization='" & OldRowIdDialog3.ToString & "'")(0)
-			Form3.MEDICAL_ORGANIZATIONTableAdapter.Update(TextBoxNameOrganization.Text, TextBoxAdresOrganization.Text, OldWorkerRow2(0), OldWorkerRow2(2))
+			Form3.MEDICAL_ORGANIZATIONTableAdapter.Update(TextBoxNameOrganization.Text, TextBoxAdresOrganization.Text, OldWorkerRow2(0), OldWorkerRow2(1))
 			Form3.organization()
 		End If
 

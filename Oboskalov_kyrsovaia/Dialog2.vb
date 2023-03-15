@@ -5,12 +5,13 @@ Public Class Dialog2
     Public OldRowID2 As ULong
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
+        DateTimePicker1.CustomFormat = "dd.ww.yyyy"
         If AddOrChange2 = False Then
-            Form1.GRUPPATableAdapter.Insert(DateTimePicker1.Value, TextBox2.Text, TextBox1.Text)
+            Form1.GRUPPATableAdapter.Insert(DateTimePicker1.Value.Date, TextBox2.Text, TextBox1.Text)
         End If
         If AddOrChange2 = True Then
             Dim OldWorkerRow As DataRow = Form1.BaseDataSet.STUDENT.Select("ID_student='" & OldRowID2.ToString & "'")(0)
-            Form1.GRUPPATableAdapter.Update(DateTimePicker1.Value, TextBox2.Text, TextBox1.Text, OldWorkerRow(0), OldWorkerRow(1), OldWorkerRow(2), OldWorkerRow(3))
+            Form1.GRUPPATableAdapter.Update(DateTimePicker1.Value.Date, TextBox2.Text, TextBox1.Text, OldWorkerRow(0), OldWorkerRow(1), OldWorkerRow(2), OldWorkerRow(3))
             Form1.student()
         End If
 
@@ -23,5 +24,7 @@ Public Class Dialog2
         Me.Close()
     End Sub
 
+    Private Sub Dialog2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class
