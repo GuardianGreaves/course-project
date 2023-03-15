@@ -171,7 +171,7 @@ Partial Class Form4
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form4"
-        Me.Text = "Form4"
+        Me.Text = "Медицинские карты"
         CType(Me.BaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

@@ -11,7 +11,7 @@ Public Class Dialog2
         End If
         If AddOrChange2 = True Then
             Dim OldWorkerRow As DataRow = Form1.BaseDataSet.STUDENT.Select("ID_student='" & OldRowID2.ToString & "'")(0)
-            Form1.GRUPPATableAdapter.Update(DateTimePicker1.Value.Date, TextBox2.Text, TextBox1.Text, OldWorkerRow(0), OldWorkerRow(1), OldWorkerRow(2), OldWorkerRow(3))
+            'Form1.GRUPPATableAdapter.Update(DateTimePicker1.Value.Date, TextBox2.Text, TextBox1.Text, OldWorkerRow(0), OldWorkerRow(1), OldWorkerRow(2), OldWorkerRow(3))
             Form1.student()
         End If
 

@@ -167,9 +167,9 @@
 
     'очистка фильтра
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles ButtonClearFilter.Click
-        TextBoxFIO.Text = " "
-        ComboBoxGroup.Text = " "
-        ComboBoxHostel.Text = " "
+        TextBoxFIO.Text = ""
+        ComboBoxGroup.Text = ""
+        ComboBoxHostel.Text = ""
         student()
     End Sub
 
