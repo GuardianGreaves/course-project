@@ -41,10 +41,19 @@ Partial Class Form3
         Me.TableAdapterManager = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.TableAdapterManager()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ИзменитьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.BaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'ListViewOrganization
@@ -56,7 +65,7 @@ Partial Class Form3
         Me.ListViewOrganization.HideSelection = False
         Me.ListViewOrganization.Location = New System.Drawing.Point(9, 14)
         Me.ListViewOrganization.Name = "ListViewOrganization"
-        Me.ListViewOrganization.Size = New System.Drawing.Size(309, 138)
+        Me.ListViewOrganization.Size = New System.Drawing.Size(309, 162)
         Me.ListViewOrganization.TabIndex = 0
         Me.ListViewOrganization.UseCompatibleStateImageBehavior = False
         Me.ListViewOrganization.View = System.Windows.Forms.View.Details
@@ -78,18 +87,18 @@ Partial Class Form3
         '
         'ButtonAddOrganization
         '
-        Me.ButtonAddOrganization.Location = New System.Drawing.Point(9, 158)
+        Me.ButtonAddOrganization.Location = New System.Drawing.Point(10, 182)
         Me.ButtonAddOrganization.Name = "ButtonAddOrganization"
-        Me.ButtonAddOrganization.Size = New System.Drawing.Size(151, 23)
+        Me.ButtonAddOrganization.Size = New System.Drawing.Size(151, 27)
         Me.ButtonAddOrganization.TabIndex = 1
         Me.ButtonAddOrganization.Text = "Добавить организацию"
         Me.ButtonAddOrganization.UseVisualStyleBackColor = True
         '
         'ButtonDeleteOrganization
         '
-        Me.ButtonDeleteOrganization.Location = New System.Drawing.Point(167, 158)
+        Me.ButtonDeleteOrganization.Location = New System.Drawing.Point(167, 182)
         Me.ButtonDeleteOrganization.Name = "ButtonDeleteOrganization"
-        Me.ButtonDeleteOrganization.Size = New System.Drawing.Size(151, 23)
+        Me.ButtonDeleteOrganization.Size = New System.Drawing.Size(151, 27)
         Me.ButtonDeleteOrganization.TabIndex = 2
         Me.ButtonDeleteOrganization.Text = "Удалить организацию"
         Me.ButtonDeleteOrganization.UseVisualStyleBackColor = True
@@ -156,7 +165,7 @@ Partial Class Form3
         Me.GroupBox2.Controls.Add(Me.ButtonAddOrganization)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 104)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(327, 188)
+        Me.GroupBox2.Size = New System.Drawing.Size(327, 215)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Список организаций"
@@ -198,14 +207,83 @@ Partial Class Form3
         'ИзменитьToolStripMenuItem
         '
         Me.ИзменитьToolStripMenuItem.Name = "ИзменитьToolStripMenuItem"
-        Me.ИзменитьToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ИзменитьToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.ИзменитьToolStripMenuItem.Text = "Изменить"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Button2)
+        Me.GroupBox3.Controls.Add(Me.Button3)
+        Me.GroupBox3.Controls.Add(Me.Button4)
+        Me.GroupBox3.Controls.Add(Me.ListView1)
+        Me.GroupBox3.Location = New System.Drawing.Point(345, 12)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(442, 307)
+        Me.GroupBox3.TabIndex = 67
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Документы из Поликлиники"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(9, 274)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(124, 27)
+        Me.Button2.TabIndex = 65
+        Me.Button2.Text = "Перейти к документу"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(181, 274)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(124, 27)
+        Me.Button3.TabIndex = 67
+        Me.Button3.Text = "Добавить документ"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Location = New System.Drawing.Point(311, 274)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(124, 27)
+        Me.Button4.TabIndex = 66
+        Me.Button4.Text = "Удалить документ"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10})
+        Me.ListView1.GridLines = True
+        Me.ListView1.HideSelection = False
+        Me.ListView1.Location = New System.Drawing.Point(8, 19)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(427, 249)
+        Me.ListView1.TabIndex = 64
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Название документа"
+        Me.ColumnHeader8.Width = 194
+        '
+        'ColumnHeader9
+        '
+        Me.ColumnHeader9.Text = "Организация"
+        Me.ColumnHeader9.Width = 131
+        '
+        'ColumnHeader10
+        '
+        Me.ColumnHeader10.Text = "Дата"
+        Me.ColumnHeader10.Width = 96
         '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(346, 298)
+        Me.ClientSize = New System.Drawing.Size(795, 328)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Name = "Form3"
@@ -215,6 +293,7 @@ Partial Class Form3
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.BaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -237,4 +316,12 @@ Partial Class Form3
     Friend WithEvents Button1 As Button
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents ИзменитьToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents ColumnHeader8 As ColumnHeader
+    Friend WithEvents ColumnHeader9 As ColumnHeader
+    Friend WithEvents ColumnHeader10 As ColumnHeader
 End Class

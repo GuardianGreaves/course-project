@@ -24,6 +24,9 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ComboBoxDate = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxNumbStud = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxGruppa = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -40,16 +43,23 @@ Partial Class Form2
         Me.GRUPPABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GRUPPATableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.GRUPPATableAdapter()
         Me.TableAdapterManager = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.TableAdapterManager()
-        Me.ComboBoxGruppa = New System.Windows.Forms.ComboBox()
-        Me.ComboBoxNumbStud = New System.Windows.Forms.ComboBox()
-        Me.ComboBoxDate = New System.Windows.Forms.ComboBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ИзменитьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.ListViewStudent = New System.Windows.Forms.ListView()
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ButtonDeleteStudent = New System.Windows.Forms.Button()
+        Me.ButtonAddStudent = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.BaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GRUPPABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -66,6 +76,30 @@ Partial Class Form2
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Поиск и фильтрация"
+        '
+        'ComboBoxDate
+        '
+        Me.ComboBoxDate.FormattingEnabled = True
+        Me.ComboBoxDate.Location = New System.Drawing.Point(237, 31)
+        Me.ComboBoxDate.Name = "ComboBoxDate"
+        Me.ComboBoxDate.Size = New System.Drawing.Size(116, 21)
+        Me.ComboBoxDate.TabIndex = 6
+        '
+        'ComboBoxNumbStud
+        '
+        Me.ComboBoxNumbStud.FormattingEnabled = True
+        Me.ComboBoxNumbStud.Location = New System.Drawing.Point(106, 31)
+        Me.ComboBoxNumbStud.Name = "ComboBoxNumbStud"
+        Me.ComboBoxNumbStud.Size = New System.Drawing.Size(116, 21)
+        Me.ComboBoxNumbStud.TabIndex = 5
+        '
+        'ComboBoxGruppa
+        '
+        Me.ComboBoxGruppa.FormattingEnabled = True
+        Me.ComboBoxGruppa.Location = New System.Drawing.Point(9, 31)
+        Me.ComboBoxGruppa.Name = "ComboBoxGruppa"
+        Me.ComboBoxGruppa.Size = New System.Drawing.Size(79, 21)
+        Me.ComboBoxGruppa.TabIndex = 4
         '
         'Label3
         '
@@ -102,14 +136,14 @@ Partial Class Form2
         Me.GroupBox1.Controls.Add(Me.ButtonGroupDate)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 81)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(369, 216)
+        Me.GroupBox1.Size = New System.Drawing.Size(369, 296)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Список групп"
         '
         'ButtonAddGroup
         '
-        Me.ButtonAddGroup.Location = New System.Drawing.Point(157, 184)
+        Me.ButtonAddGroup.Location = New System.Drawing.Point(157, 267)
         Me.ButtonAddGroup.Name = "ButtonAddGroup"
         Me.ButtonAddGroup.Size = New System.Drawing.Size(102, 23)
         Me.ButtonAddGroup.TabIndex = 3
@@ -118,7 +152,7 @@ Partial Class Form2
         '
         'ButtonDeleteGroup
         '
-        Me.ButtonDeleteGroup.Location = New System.Drawing.Point(265, 184)
+        Me.ButtonDeleteGroup.Location = New System.Drawing.Point(265, 267)
         Me.ButtonDeleteGroup.Name = "ButtonDeleteGroup"
         Me.ButtonDeleteGroup.Size = New System.Drawing.Size(98, 23)
         Me.ButtonDeleteGroup.TabIndex = 4
@@ -135,7 +169,7 @@ Partial Class Form2
         Me.ListViewGroup.Location = New System.Drawing.Point(6, 19)
         Me.ListViewGroup.MultiSelect = False
         Me.ListViewGroup.Name = "ListViewGroup"
-        Me.ListViewGroup.Size = New System.Drawing.Size(357, 159)
+        Me.ListViewGroup.Size = New System.Drawing.Size(357, 242)
         Me.ListViewGroup.TabIndex = 1
         Me.ListViewGroup.UseCompatibleStateImageBehavior = False
         Me.ListViewGroup.View = System.Windows.Forms.View.Details
@@ -162,7 +196,7 @@ Partial Class Form2
         '
         'ButtonGroupDate
         '
-        Me.ButtonGroupDate.Location = New System.Drawing.Point(6, 184)
+        Me.ButtonGroupDate.Location = New System.Drawing.Point(6, 267)
         Me.ButtonGroupDate.Name = "ButtonGroupDate"
         Me.ButtonGroupDate.Size = New System.Drawing.Size(102, 23)
         Me.ButtonGroupDate.TabIndex = 2
@@ -202,47 +236,94 @@ Partial Class Form2
         Me.TableAdapterManager.SURVEYSTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Oboskalov_kyrsovaia.baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'ComboBoxGruppa
-        '
-        Me.ComboBoxGruppa.FormattingEnabled = True
-        Me.ComboBoxGruppa.Location = New System.Drawing.Point(9, 31)
-        Me.ComboBoxGruppa.Name = "ComboBoxGruppa"
-        Me.ComboBoxGruppa.Size = New System.Drawing.Size(79, 21)
-        Me.ComboBoxGruppa.TabIndex = 4
-        '
-        'ComboBoxNumbStud
-        '
-        Me.ComboBoxNumbStud.FormattingEnabled = True
-        Me.ComboBoxNumbStud.Location = New System.Drawing.Point(106, 32)
-        Me.ComboBoxNumbStud.Name = "ComboBoxNumbStud"
-        Me.ComboBoxNumbStud.Size = New System.Drawing.Size(116, 21)
-        Me.ComboBoxNumbStud.TabIndex = 5
-        '
-        'ComboBoxDate
-        '
-        Me.ComboBoxDate.FormattingEnabled = True
-        Me.ComboBoxDate.Location = New System.Drawing.Point(237, 31)
-        Me.ComboBoxDate.Name = "ComboBoxDate"
-        Me.ComboBoxDate.Size = New System.Drawing.Size(116, 21)
-        Me.ComboBoxDate.TabIndex = 6
-        '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ИзменитьToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(129, 26)
         '
         'ИзменитьToolStripMenuItem
         '
         Me.ИзменитьToolStripMenuItem.Name = "ИзменитьToolStripMenuItem"
-        Me.ИзменитьToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ИзменитьToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.ИзменитьToolStripMenuItem.Text = "Изменить"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.ListViewStudent)
+        Me.GroupBox3.Controls.Add(Me.ButtonDeleteStudent)
+        Me.GroupBox3.Controls.Add(Me.ButtonAddStudent)
+        Me.GroupBox3.Location = New System.Drawing.Point(387, 12)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(576, 365)
+        Me.GroupBox3.TabIndex = 23
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Студенты 4П группы"
+        '
+        'ListViewStudent
+        '
+        Me.ListViewStudent.CheckBoxes = True
+        Me.ListViewStudent.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8})
+        Me.ListViewStudent.FullRowSelect = True
+        Me.ListViewStudent.GridLines = True
+        Me.ListViewStudent.HideSelection = False
+        Me.ListViewStudent.Location = New System.Drawing.Point(6, 19)
+        Me.ListViewStudent.MultiSelect = False
+        Me.ListViewStudent.Name = "ListViewStudent"
+        Me.ListViewStudent.Size = New System.Drawing.Size(560, 311)
+        Me.ListViewStudent.TabIndex = 0
+        Me.ListViewStudent.UseCompatibleStateImageBehavior = False
+        Me.ListViewStudent.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = ""
+        Me.ColumnHeader2.Width = 23
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "ФИО студента"
+        Me.ColumnHeader3.Width = 211
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Дата рождения"
+        Me.ColumnHeader6.Width = 95
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "Адрес"
+        Me.ColumnHeader7.Width = 168
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Общежитие"
+        Me.ColumnHeader8.Width = 86
+        '
+        'ButtonDeleteStudent
+        '
+        Me.ButtonDeleteStudent.Location = New System.Drawing.Point(435, 336)
+        Me.ButtonDeleteStudent.Name = "ButtonDeleteStudent"
+        Me.ButtonDeleteStudent.Size = New System.Drawing.Size(131, 23)
+        Me.ButtonDeleteStudent.TabIndex = 10
+        Me.ButtonDeleteStudent.Text = "Удалить студента"
+        Me.ButtonDeleteStudent.UseVisualStyleBackColor = True
+        '
+        'ButtonAddStudent
+        '
+        Me.ButtonAddStudent.Location = New System.Drawing.Point(298, 336)
+        Me.ButtonAddStudent.Name = "ButtonAddStudent"
+        Me.ButtonAddStudent.Size = New System.Drawing.Size(131, 23)
+        Me.ButtonAddStudent.TabIndex = 9
+        Me.ButtonAddStudent.Text = "Добавить студента"
+        Me.ButtonAddStudent.UseVisualStyleBackColor = True
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(392, 303)
+        Me.ClientSize = New System.Drawing.Size(969, 389)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form2"
@@ -253,6 +334,7 @@ Partial Class Form2
         CType(Me.BaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GRUPPABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -279,4 +361,13 @@ Partial Class Form2
     Friend WithEvents ComboBoxDate As ComboBox
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents ИзменитьToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents ListViewStudent As ListView
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents ColumnHeader7 As ColumnHeader
+    Friend WithEvents ColumnHeader8 As ColumnHeader
+    Friend WithEvents ButtonDeleteStudent As Button
+    Friend WithEvents ButtonAddStudent As Button
 End Class

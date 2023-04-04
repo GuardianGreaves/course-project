@@ -5,7 +5,7 @@
     Public a
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'PictureBox1.Image = Image.FromFile(IO.Directory.GetCurrentDirectory & "\Picture\KPK_gerb.jpg")
+        PictureBox1.Image = Image.FromFile(IO.Directory.GetCurrentDirectory & "\Picture\KPK_gerb.jpg")
         student()
     End Sub
 
@@ -70,22 +70,22 @@
 
     'сложный запрос общежитие: нет
     Private Sub ОбщежитиеToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ОбщежитиеToolStripMenuItem.Click
-        'Dim cn As New OleDb.OleDbConnection ' 
-        'cn.ConnectionString = My.Settings.kporiginalConnectionString2
-        'MsgBox(cn.ConnectionString)
-        'cn.Open()
-        'Dim sql As New OleDb.OleDbCommand("SELECT STUDENT.FIO_student As [Фамилия Имя Отчество], GRUPPA.name_group As Группа, STUDENT.date_of_application As [Дата зачисления], STUDENT.birthday As [Дата рождения], STUDENT.address_students As [Адрес], STUDENT.hostel As [Общежитие] FROM GRUPPA INNER JOIN STUDENT ON GRUPPA.ID_group = STUDENT.ID_group WHERE (((STUDENT.hostel)='Нет'))", cn)
-        'Dim da As New OleDb.OleDbDataAdapter
-        'Dim DataSqlTable As New DataTable
-        'da.SelectCommand = sql
-        'da.Fill(DataSqlTable)
-        'cn.Close()
-        'Dim RowCB As DataRow
-        'For Each RowCB In DataSqlTable.Rows
-        '    MsgBox(RowCB("Фамилия Имя Отчество") & " " & RowCB("Группа") & " " & RowCB("Дата зачисления") & " " & RowCB("Дата рождения") & " " & RowCB("Адрес") & " " & RowCB("Общежитие"))
-        'Next RowCB
-        'Form3.DataGridView1.DataSource = DataSqlTable
-        'Form3.Show()
+        Dim cn As New OleDb.OleDbConnection ' 
+        cn.ConnectionString = My.Settings.baseConnectionString
+        MsgBox(cn.ConnectionString)
+        cn.Open()
+        Dim sql As New OleDb.OleDbCommand("SELECT STUDENT.FIO_student As [Фамилия Имя Отчество], GRUPPA.name_group As Группа, STUDENT.date_of_application As [Дата зачисления], STUDENT.birthday As [Дата рождения], STUDENT.address_students As [Адрес], STUDENT.hostel As [Общежитие] FROM GRUPPA INNER JOIN STUDENT ON GRUPPA.ID_group = STUDENT.ID_group WHERE (((STUDENT.hostel)='Нет'))", cn)
+        Dim da As New OleDb.OleDbDataAdapter
+        Dim DataSqlTable As New DataTable
+        da.SelectCommand = sql
+        da.Fill(DataSqlTable)
+        cn.Close()
+        Dim RowCB As DataRow
+        For Each RowCB In DataSqlTable.Rows
+            MsgBox(RowCB("Фамилия Имя Отчество") & " " & RowCB("Группа") & " " & RowCB("Дата зачисления") & " " & RowCB("Дата рождения") & " " & RowCB("Адрес") & " " & RowCB("Общежитие"))
+        Next RowCB
+        Form12.DataGridView1.DataSource = DataSqlTable
+        Form12.Show()
     End Sub
 
 
@@ -278,7 +278,7 @@
     End Sub
 
 
-    Public Sub Button2_Click(sender As Object, e As EventArgs) Handles ButtonStudentData.Click
+    Public Sub Button2_Click(sender As Object, e As EventArgs)
         a = ListViewStudent.FocusedItem.Text
         Form11.Show()
 
@@ -366,5 +366,39 @@
         Form8.Show()
     End Sub
 
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
+    End Sub
+
+    Private Sub ComboBoxGroup_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxGroup.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+
+    End Sub
+
+    Private Sub GroupBox4_Enter(sender As Object, e As EventArgs) Handles GroupBox4.Enter
+
+    End Sub
+
+    Private Sub ComboBoxHostel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxHostel.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
 End Class

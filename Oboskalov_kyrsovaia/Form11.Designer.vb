@@ -39,6 +39,7 @@ Partial Class Form11
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.BaseDataSet = New Oboskalov_kyrsovaia.baseDataSet()
         Me.STUDENTTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.STUDENTTableAdapter()
         Me.TableAdapterManager = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.TableAdapterManager()
@@ -51,14 +52,17 @@ Partial Class Form11
         Me.PREVENTIVE_VACCINATIONSTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.PREVENTIVE_VACCINATIONSTableAdapter()
         Me.RESPONIBLE_FOR_PASSESTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.RESPONIBLE_FOR_PASSESTableAdapter()
         Me.SURVEYSTableAdapter = New Oboskalov_kyrsovaia.baseDataSetTableAdapters.SURVEYSTableAdapter()
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         CType(Me.BaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'ComboBoxGroup
         '
         Me.ComboBoxGroup.FormattingEnabled = True
-        Me.ComboBoxGroup.Location = New System.Drawing.Point(155, 187)
+        Me.ComboBoxGroup.Location = New System.Drawing.Point(149, 171)
         Me.ComboBoxGroup.Name = "ComboBoxGroup"
         Me.ComboBoxGroup.Size = New System.Drawing.Size(120, 21)
         Me.ComboBoxGroup.TabIndex = 59
@@ -85,7 +89,7 @@ Partial Class Form11
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(15, 171)
+        Me.Label6.Location = New System.Drawing.Point(9, 155)
         Me.Label6.Name = "Label6"
         Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label6.Size = New System.Drawing.Size(67, 13)
@@ -95,7 +99,7 @@ Partial Class Form11
         'TextBoxAddressStudent
         '
         Me.TextBoxAddressStudent.AllowDrop = True
-        Me.TextBoxAddressStudent.Location = New System.Drawing.Point(15, 93)
+        Me.TextBoxAddressStudent.Location = New System.Drawing.Point(9, 77)
         Me.TextBoxAddressStudent.Name = "TextBoxAddressStudent"
         Me.TextBoxAddressStudent.Size = New System.Drawing.Size(260, 20)
         Me.TextBoxAddressStudent.TabIndex = 55
@@ -103,7 +107,7 @@ Partial Class Form11
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 77)
+        Me.Label5.Location = New System.Drawing.Point(6, 61)
         Me.Label5.Name = "Label5"
         Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label5.Size = New System.Drawing.Size(103, 13)
@@ -112,7 +116,7 @@ Partial Class Form11
         '
         'DateTimePickerBirthday
         '
-        Me.DateTimePickerBirthday.Location = New System.Drawing.Point(155, 139)
+        Me.DateTimePickerBirthday.Location = New System.Drawing.Point(149, 123)
         Me.DateTimePickerBirthday.Name = "DateTimePickerBirthday"
         Me.DateTimePickerBirthday.Size = New System.Drawing.Size(120, 20)
         Me.DateTimePickerBirthday.TabIndex = 53
@@ -120,7 +124,7 @@ Partial Class Form11
         'DateTimePickerZachisleniye
         '
         Me.DateTimePickerZachisleniye.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DateTimePickerZachisleniye.Location = New System.Drawing.Point(15, 139)
+        Me.DateTimePickerZachisleniye.Location = New System.Drawing.Point(9, 123)
         Me.DateTimePickerZachisleniye.Name = "DateTimePickerZachisleniye"
         Me.DateTimePickerZachisleniye.Size = New System.Drawing.Size(120, 20)
         Me.DateTimePickerZachisleniye.TabIndex = 52
@@ -128,7 +132,7 @@ Partial Class Form11
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(155, 123)
+        Me.Label4.Location = New System.Drawing.Point(149, 107)
         Me.Label4.Name = "Label4"
         Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label4.Size = New System.Drawing.Size(86, 13)
@@ -138,7 +142,7 @@ Partial Class Form11
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(15, 123)
+        Me.Label3.Location = New System.Drawing.Point(9, 107)
         Me.Label3.Name = "Label3"
         Me.Label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label3.Size = New System.Drawing.Size(95, 13)
@@ -148,7 +152,7 @@ Partial Class Form11
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(155, 171)
+        Me.Label2.Location = New System.Drawing.Point(149, 155)
         Me.Label2.Name = "Label2"
         Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label2.Size = New System.Drawing.Size(42, 13)
@@ -157,7 +161,7 @@ Partial Class Form11
         '
         'TextBoxFIO
         '
-        Me.TextBoxFIO.Location = New System.Drawing.Point(15, 48)
+        Me.TextBoxFIO.Location = New System.Drawing.Point(9, 32)
         Me.TextBoxFIO.Name = "TextBoxFIO"
         Me.TextBoxFIO.Size = New System.Drawing.Size(260, 20)
         Me.TextBoxFIO.TabIndex = 48
@@ -165,7 +169,7 @@ Partial Class Form11
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 32)
+        Me.Label1.Location = New System.Drawing.Point(6, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(133, 13)
         Me.Label1.TabIndex = 47
@@ -175,7 +179,7 @@ Partial Class Form11
         '
         Me.ComboBoxHostel.FormattingEnabled = True
         Me.ComboBoxHostel.Items.AddRange(New Object() {"Да", "Нет"})
-        Me.ComboBoxHostel.Location = New System.Drawing.Point(15, 187)
+        Me.ComboBoxHostel.Location = New System.Drawing.Point(9, 171)
         Me.ComboBoxHostel.Name = "ComboBoxHostel"
         Me.ComboBoxHostel.Size = New System.Drawing.Size(120, 21)
         Me.ComboBoxHostel.TabIndex = 63
@@ -185,9 +189,9 @@ Partial Class Form11
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(295, 48)
+        Me.ListView1.Location = New System.Drawing.Point(6, 19)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(377, 160)
+        Me.ListView1.Size = New System.Drawing.Size(377, 173)
         Me.ListView1.TabIndex = 64
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -201,6 +205,11 @@ Partial Class Form11
         '
         Me.ColumnHeader2.Text = "Организация"
         Me.ColumnHeader2.Width = 110
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Дата"
+        Me.ColumnHeader3.Width = 76
         '
         'BaseDataSet
         '
@@ -266,34 +275,51 @@ Partial Class Form11
         '
         Me.SURVEYSTableAdapter.ClearBeforeFill = True
         '
-        'ColumnHeader3
+        'GroupBox1
         '
-        Me.ColumnHeader3.Text = "Дата"
-        Me.ColumnHeader3.Width = 76
+        Me.GroupBox1.Controls.Add(Me.ListView1)
+        Me.GroupBox1.Location = New System.Drawing.Point(293, 25)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(391, 198)
+        Me.GroupBox1.TabIndex = 65
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Документы"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.DateTimePickerBirthday)
+        Me.GroupBox2.Controls.Add(Me.ComboBoxHostel)
+        Me.GroupBox2.Controls.Add(Me.Label1)
+        Me.GroupBox2.Controls.Add(Me.ComboBoxGroup)
+        Me.GroupBox2.Controls.Add(Me.TextBoxFIO)
+        Me.GroupBox2.Controls.Add(Me.Label2)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.TextBoxAddressStudent)
+        Me.GroupBox2.Controls.Add(Me.DateTimePickerZachisleniye)
+        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 25)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(275, 198)
+        Me.GroupBox2.TabIndex = 66
+        Me.GroupBox2.TabStop = False
         '
         'Form11
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(742, 536)
-        Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.ComboBoxHostel)
-        Me.Controls.Add(Me.ComboBoxGroup)
+        Me.ClientSize = New System.Drawing.Size(694, 232)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBoxAddressStudent)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.DateTimePickerBirthday)
-        Me.Controls.Add(Me.DateTimePickerZachisleniye)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBoxFIO)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form11"
         Me.Text = "Form11"
         CType(Me.BaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -328,4 +354,6 @@ Partial Class Form11
     Friend WithEvents RESPONIBLE_FOR_PASSESTableAdapter As baseDataSetTableAdapters.RESPONIBLE_FOR_PASSESTableAdapter
     Friend WithEvents SURVEYSTableAdapter As baseDataSetTableAdapters.SURVEYSTableAdapter
     Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GroupBox2 As GroupBox
 End Class

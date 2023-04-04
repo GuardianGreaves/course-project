@@ -163,4 +163,8 @@
             End If
         End With
     End Sub
+
+    Private Sub ButtonGroupDate_Click(sender As Object, e As EventArgs) Handles ButtonGroupDate.Click
+
+    End Sub
 End Class
